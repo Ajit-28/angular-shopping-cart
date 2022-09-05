@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="card" *ngIf="productCart">
+        <div class="row">
+            <div class="col-4">
+                <img class="img-section" src="{{productCart.image}}" alt="">
+            </div>
+            <div class="col-8">
+                <div class="headingtitle">
+                    <h3 class="title">{{productCart.title}}</h3>
+
+                    <p class="desc">{{productCart.description}}</p>
+
+                    <p><strong> Price : </strong>${{productCart.price}}</p>
+                </div>
+                <div class="btn-group">
+                    <button mat-raised-button color="primary" (click)="addtocart(productCart)"
+                        [disabled]="productCartbtn(productCart)">Add to cart</button>
+
+                    <button mat-raised-button color="accent" (click)="deleteCartItem(productCart)"
+                        [disabled]="!productCartbtn(productCart)">Remove to cart</button>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>

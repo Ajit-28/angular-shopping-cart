@@ -1,0 +1,64 @@
+<ng-container *ngIf="products.length !=0">
+    <div class="container">
+        <div class="container">
+            <div class="card" *ngFor="let item of products; let i = index">
+                <div class="row">
+                    <div class="col-4">
+                        <img class="img-section" src="{{item.image}}" alt="">
+                    </div>
+                    <div class="col-8">
+                        <div class="headingtitle">
+                            <h3 class="title">{{item.title}}</h3>
+
+                            <p class="desc">{{item.description}}</p>
+
+                            <p><strong> Price : </strong>${{item.price}} </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="action-content">
+
+                    <div>
+                        <button class="qty-btn" (click)=" productQty('+',item)">+</button>
+                        {{item.quantity}}
+                        <button class="qty-btn" (click)=" productQty('-',item)">-</button>
+                    </div>
+
+                    <p class="total"><strong>Total : </strong>{{item.total}}</p>
+
+                    <div class="rigth-content">
+                        <button (click)="removeItem(item)" mat-raised-button color="warn">Remove Cart</button>
+                        <button routerLink="/products" mat-raised-button color="primary">Shop More</button>
+                    </div>
+
+                    <!-- <div class="rigth-content">
+                        <button (click)="emptyCart()" mat-raised-button color="warn">Empty Cart</button>
+                        <button routerLink="/products" mat-raised-button color="primary">Shop More</button>
+                    </div> -->
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</ng-container>
+
+
+<!-- --------------------------------------------- -->
+
+
+
+<!-- ---------------------------------------------- -->
+
+<ng-container *ngIf="products.length == 0">
+    <div class="container">
+        <div class="shop-now">
+            <h2 class="card-title">My Cart</h2>
+        </div>
+        <div class="center">
+            <h4>Your cart is empty!</h4>
+            <h5>Add item to it now</h5>
+            <button routerLink="/products" class="btn btn-primary">Shop Now</button>
+        </div>
+    </div>
+</ng-container>

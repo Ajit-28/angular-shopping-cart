@@ -1,0 +1,161 @@
+.card{
+    height: 65vh;
+    margin: 25px;
+    padding: 25px;
+    box-shadow: 0 8px 33px 0 rgb(84, 84, 84);
+}
+
+.shop-now{
+    height: 65vh;
+    margin: 25px;
+    padding: 25px;
+    box-shadow: 0 8px 33px 0 rgb(84, 84, 84);
+}
+
+.center {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.center .btn {
+    font-size: 14px !important;
+    margin-top: 20px !important;
+    font-weight: 400;
+    padding: 12px 72px;
+    border-radius: 3px !important;
+}
+
+/* ------------------------- */
+
+.action-content {
+    height: 70px;
+    /* background-color: gray; */
+    margin-top: 5%;
+    margin-bottom: 15px;
+    display: flex;
+}
+
+.img-section {
+    width: 200px;
+    height: 200px;
+    margin: 30px 50px;
+}
+
+.qty-btn {
+    margin: 20px 10px;
+    border: none;
+    outline: none;
+    background-color: rgb(202, 205, 208);
+}
+
+.total{
+    margin: 22px 10px;
+}
+
+.row {
+    margin: auto;
+}
+
+.col-4 {
+    margin: 20px auto;
+}
+
+.img-section {
+    width: 200px;
+    height: 200px;
+    margin: 30px 50px;
+}
+
+.headingtitle {
+    margin: 30px auto;
+    padding: 10px;
+}
+
+.btn-group {
+    padding: 10px 0;
+}
+
+.rigth-content{
+    display: flex;
+    margin-left: auto;
+    margin-right: 20px;
+ }
+
+.mat-raised-button {
+   height: 40px;
+   margin: 15px 8px;
+}
+
+
+/* ------------------------------- */
+
+@media (max-width:1440px) {
+    .card {
+        width: 100%;
+    }
+    .img-section {
+        margin: 40px 36px;
+    }
+}
+
+@media (max-width:768px) {
+    .card {
+        width: 100%;
+        height: 100%;
+        margin: 20px auto;
+    }
+
+    .col-4 {
+        width: auto;
+        margin: 10px auto;
+    }
+
+    .col-8 {
+        width: 100%;
+    }
+
+    .headingtitle {
+        margin: 30px auto;
+        padding: 10px;
+    }
+
+}
+
+@media (max-width:576px) {
+
+    .card {
+        height: 100%;
+        width: 100%;
+    }
+
+    .col-4 {
+        width: 100%;
+        margin: auto;
+    }
+
+    .col-8 {
+        width: 100%;
+        padding: auto;
+    }
+    .img-section{
+        margin: auto;
+    }
+
+    .action-content {
+        flex-direction: column;
+        height: 100%;
+     }
+     
+     .total {
+        margin: 10px;
+    }
+
+     .rigth-content{
+        display: flex;
+        margin: 0%;
+     }
+    
+}
