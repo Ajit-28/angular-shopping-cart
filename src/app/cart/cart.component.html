@@ -12,7 +12,7 @@
 
                             <p class="desc">{{item.description}}</p>
 
-                            <p><strong> Price : </strong>${{item.price}} </p>
+                            <p class="price"><strong> Price : </strong>${{item.price}} </p>
                         </div>
                     </div>
                 </div>
@@ -27,11 +27,12 @@
                     <p class="total"><strong>Total : </strong>{{item.total}}</p>
 
                     <div class="rigth-content">
-                        <button (click)="removeItem(item)" mat-raised-button color="warn">Remove Cart</button>
-                        <button routerLink="/products" mat-raised-button color="primary">Shop More</button>
+                        <button mat-icon-button color="accent" (click)="removeItem(item)">
+                            <mat-icon>delete</mat-icon>
+                        </button>
                     </div>
 
-                    <!-- <div class="rigth-content">
+                    <!-- <div class="rigth-content"
                         <button (click)="emptyCart()" mat-raised-button color="warn">Empty Cart</button>
                         <button routerLink="/products" mat-raised-button color="primary">Shop More</button>
                     </div> -->
@@ -39,7 +40,11 @@
                 </div>
             </div>
         </div>
-
+        <div class="footer">
+            <p class="total"><strong>Grand Total :${{grandTotal}} </strong></p>
+            <button (click)="emptyCart()" mat-raised-button color="warn">Remove all Cart</button>
+            <button routerLink="/products" mat-raised-button color="primary">Shop More</button>
+        </div>
     </div>
 </ng-container>
 

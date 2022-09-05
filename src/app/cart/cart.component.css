@@ -74,6 +74,10 @@
     padding: 10px;
 }
 
+.price{
+    margin-top: 40px;
+}
+
 .btn-group {
     padding: 10px 0;
 }
@@ -87,6 +91,12 @@
 .mat-raised-button {
    height: 40px;
    margin: 15px 8px;
+}
+
+.footer{
+    /* background-color: yellow; */
+    display: flex;
+    padding: 5px 40px;
 }
 
 
@@ -156,6 +166,9 @@
      .rigth-content{
         display: flex;
         margin: 0%;
+     }
+     .footer{
+       flex-direction: column;
      }
     
 }
